@@ -12,14 +12,14 @@ services:
     restart: always
     build: .
     volumes:
-      - "./:/app"
+      - "./log:/app/log"
     ports:
       - "3000:3000"
     networks:
       - oander
     environment:
       - REDIS_PORT=6379
-      - REDIS_HOST=rediss
+      - REDIS_HOST=redis
       - API_PORT=3000
 networks:
   oander:
