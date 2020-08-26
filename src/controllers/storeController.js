@@ -4,8 +4,6 @@ const getKey = async (services, req, res) => {
   req.logger.info(`Requesting key "${key}" from store`, { key });
   const value = await services.store.get(key, req.logger);
 
-  JSON.parse('penis')
-
   return res.json({
     success: true,
     value,
